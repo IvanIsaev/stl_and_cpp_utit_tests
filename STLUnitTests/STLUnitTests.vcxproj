@@ -23,8 +23,10 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\old_support.cpp" />
     <ClCompile Include="src\test_algorithm.cpp" />
+    <ClCompile Include="src\test_atomic.cpp" />
     <ClCompile Include="src\test_filesystem.cpp" />
     <ClCompile Include="src\test_memory.cpp" />
+    <ClCompile Include="src\test_thread.cpp" />
     <ClCompile Include="src\test_tuple.cpp" />
     <ClCompile Include="src\test_utility.cpp" />
   </ItemGroup>
