@@ -20,8 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common_utils.cpp" />
+    <ClCompile Include="src\test_rvalue_lvalue.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\old_support.cpp" />
+    <ClCompile Include="src\test_cast.cpp" />
+    <ClCompile Include="src\test_old_support.cpp" />
     <ClCompile Include="src\test_algorithm.cpp" />
     <ClCompile Include="src\test_atomic.cpp" />
     <ClCompile Include="src\test_filesystem.cpp" />

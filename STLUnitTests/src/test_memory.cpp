@@ -17,23 +17,26 @@ namespace {
 	};
 }
 
-TEST(test_enable_shared_from_this, try_shared_from_none_shared)
+namespace TestMemory
 {
-	// given
-	auto obj = ClassSharable();
-	
-	// then
-	ASSERT_THROW(obj.shared_from_this(), std::bad_weak_ptr);
-}
+	TEST(test_enable_shared_from_this, try_shared_from_none_shared)
+	{
+		// given
+		auto obj = ClassSharable();
 
-TEST(test_enable_shared_from_this, equality)
-{
-	// given
-	auto obj = std::make_shared<ClassSharable>();
+		// then
+		ASSERT_THROW(obj.shared_from_this(), std::bad_weak_ptr);
+	}
 
-	// when
-	auto objShared = obj->shared_from_this();
+	TEST(test_enable_shared_from_this, equality)
+	{
+		// given
+		auto obj = std::make_shared<ClassSharable>();
 
-	// then
-	ASSERT_EQ(obj, objShared);
+		// when
+		auto objShared = obj->shared_from_this();
+
+		// then
+		ASSERT_EQ(obj, objShared);
+	}
 }
