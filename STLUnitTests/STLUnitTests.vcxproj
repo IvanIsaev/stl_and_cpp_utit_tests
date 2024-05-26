@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common_utils.cpp" />
+    <ClCompile Include="src\test_cstring.cpp" />
     <ClCompile Include="src\test_rvalue_lvalue.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\test_cast.cpp" />
