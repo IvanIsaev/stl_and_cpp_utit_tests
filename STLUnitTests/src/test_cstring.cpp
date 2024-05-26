@@ -6,6 +6,6 @@ namespace TestCstring
 {
 	TEST(test_concat, test0)
 	{
-
+		
 	}
 }
