@@ -34,6 +34,7 @@
     <ClCompile Include="src\test_thread.cpp" />
     <ClCompile Include="src\test_tuple.cpp" />
     <ClCompile Include="src\test_utility.cpp" />
+    <ClCompile Include="src\test_variant.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common_utils.h" />
