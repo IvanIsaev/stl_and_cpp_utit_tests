@@ -15,7 +15,7 @@ namespace TestMemory
 		auto obj = ClassSharable();
 
 		// then
-		ASSERT_THROW(obj.shared_from_this(), std::bad_weak_ptr);
+		ASSERT_THROW(obj.shared_from_this(), std::bad_weak_ptr);		
 	}
 
 	TEST(test_enable_shared_from_this, equality)
