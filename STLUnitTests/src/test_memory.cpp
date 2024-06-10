@@ -4,17 +4,7 @@
 
 namespace {
 	class ClassSharable : public std::enable_shared_from_this<ClassSharable>
-	{
-		std::shared_ptr<ClassSharable> getShared()
-		{
-			return shared_from_this();
-		}
-
-		std::weak_ptr<ClassSharable> getWeak()
-		{
-			return weak_from_this();
-		}
-	};
+	{ };
 }
 
 namespace TestMemory
@@ -38,5 +28,25 @@ namespace TestMemory
 
 		// then
 		ASSERT_EQ(obj, objShared);
+	}
+
+	TEST(test_expired, test0)
+	{
+		// given
+		auto obj = std::make_shared<ClassSharable>();
+
+		// when
+		auto weakObj = obj->weak_from_this();
+
+		using namespace testing;
+
+		// then
+		ASSERT_THAT(weakObj.expired(), IsFalse());
+
+		// when
+		obj.reset();
+
+		// then
+		ASSERT_THAT(weakObj.expired(), IsTrue());
 	}
 }

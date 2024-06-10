@@ -107,4 +107,17 @@ namespace TestTuple
 		if (auto [a, b] = std::tuple(1, 2); a < b)
 			ASSERT_TRUE(a < b);
 	}
+
+	TEST(test_ignore, test0)
+	{
+		CommonUtils::dontIgnoreMe(); // C4834 :(
+		std::ignore = CommonUtils::dontIgnoreMe(); // no C4834 :)
+
+		auto setOfString = std::set<std::string>{};
+		auto inserted = false;
+
+		std::tie(std::ignore, inserted) = setOfString.insert("Text");
+
+		ASSERT_THAT(inserted, testing::IsTrue());
+	}
 }
