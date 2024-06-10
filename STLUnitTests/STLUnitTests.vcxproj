@@ -22,6 +22,7 @@
     <ClCompile Include="src\common_utils.cpp" />
     <ClCompile Include="src\test_cstring.cpp" />
     <ClCompile Include="src\test_format.cpp" />
+    <ClCompile Include="src\test_inheritance.cpp" />
     <ClCompile Include="src\test_ios.cpp" />
     <ClCompile Include="src\test_rvalue_lvalue.cpp" />
     <ClCompile Include="src\main.cpp" />
