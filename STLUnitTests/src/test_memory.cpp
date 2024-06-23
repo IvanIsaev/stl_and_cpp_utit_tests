@@ -49,4 +49,16 @@ namespace TestMemory
 		// then
 		ASSERT_THAT(weakObj.expired(), IsTrue());
 	}
+
+	TEST(test_addressof, test0)
+	{
+		// given
+		auto i = int{ 42 };
+
+		// when
+		auto p = std::addressof(i);
+
+		// then
+		ASSERT_EQ(p, &i);
+	}
 }

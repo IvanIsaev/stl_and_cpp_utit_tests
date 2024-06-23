@@ -22,4 +22,19 @@ namespace TestUtility
 		ASSERT_THAT(v, copyOfVectorToExchange);
 		ASSERT_EQ(actualFibbonaci, expectedFibbonaci10Value);
 	}
+
+	TEST(test_as_const, test0)
+	{
+		// given
+		auto v = std::string{"hello"};		
+
+		// when
+		auto&& vConst = std::as_const(v);
+				
+
+		// then
+		ASSERT_THAT(v, testing::StrEq("hello"));
+		ASSERT_THAT(vConst, testing::StrEq("hello"));
+	}
+		
 }
