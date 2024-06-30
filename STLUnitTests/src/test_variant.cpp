@@ -14,8 +14,6 @@ namespace TestVariant
 		auto actualIntValue = std::get_if<int>(&intOrDouble);
 		auto actualDoubleValue = std::get_if<double>(&intOrDouble);
 
-		using namespace testing;
-
 		// then
 		ASSERT_THAT(*actualIntValue, Eq(expectedIntValue));
 		ASSERT_THAT(actualDoubleValue, IsNull());

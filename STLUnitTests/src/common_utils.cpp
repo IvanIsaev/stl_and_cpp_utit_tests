@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "common_utils.h"
 
 std::tuple<char, int, bool> CommonUtils::getEtalonTuple()

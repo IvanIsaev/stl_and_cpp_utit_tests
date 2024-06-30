@@ -70,7 +70,28 @@ namespace TestAtomic
 	}
 
 	TEST(test_compare_exchange_strong, test0)
-	{}
+	{
+		// given
+		const auto zero = 0;
+		auto atom = std::atomic<int>{ zero };
+		auto expected = 1;
+		const auto desired = 2;
+
+		// when
+		auto equality = atom.compare_exchange_strong(expected, desired);
+
+		// then
+		ASSERT_THAT(equality, IsFalse());
+		ASSERT_THAT(atom, Eq(zero));
+		ASSERT_THAT(expected, Eq(zero));
+
+		// when
+		equality = atom.compare_exchange_strong(expected, desired);
+
+		// then
+		ASSERT_THAT(equality, IsTrue());
+		ASSERT_THAT(atom, Eq(desired));		
+	}
 
 	TEST(test_compare_exchange_weak, test0)
 	{}
@@ -103,6 +124,6 @@ namespace TestAtomic
 		t2.join();
 
 		// then 
-		ASSERT_THAT(vec, testing::ElementsAre(0, 1, 2, 3, 4, 5, 6, 7, 8, 9));
+		ASSERT_THAT(vec, ElementsAre(0, 1, 2, 3, 4, 5, 6, 7, 8, 9));
 	}
 }

@@ -42,8 +42,6 @@ namespace TestOldSupport
 
 	TEST(check_object_size, test0)
 	{
-		using namespace testing;
-
 		// when
 		struct S0
 		{

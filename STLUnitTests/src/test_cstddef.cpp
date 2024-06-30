@@ -18,8 +18,6 @@ namespace TestCstddef
 			short s = 3;
 		};
 		
-		using namespace testing;
-
 		// then
 		ASSERT_THAT(offsetof(T, c), Eq(0));
 		ASSERT_THAT(offsetof(T, d), Eq(8));

@@ -13,8 +13,6 @@ namespace TestVector
 		// when
 		v.push_back(v.front()); // May by UB bcs reallocation		
 		
-		using namespace testing;
-		
 		// then
 		ASSERT_THAT(v.back(), Eq(value));
 	}

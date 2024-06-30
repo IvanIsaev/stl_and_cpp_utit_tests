@@ -22,7 +22,7 @@ namespace TestIosBase
 		actualStr = stringStream.str();
 
 		// then
-		ASSERT_THAT(actualStr, testing::StrEq(expectedStr));
+		ASSERT_THAT(actualStr, StrEq(expectedStr));
 	}
 
 	TEST(test_openmode, test_binary)
@@ -37,7 +37,7 @@ namespace TestIosBase
 		actualStr = stringStream.str();
 
 		// then
-		ASSERT_THAT(actualStr, testing::StrEq(expectedStr));
+		ASSERT_THAT(actualStr, StrEq(expectedStr));
 	}
 
 	TEST(test_openmode, test_in)
@@ -52,7 +52,7 @@ namespace TestIosBase
 		stringStream >> actualStr;
 
 		// then
-		ASSERT_THAT(actualStr, testing::StrEq(expectedStr));
+		ASSERT_THAT(actualStr, StrEq(expectedStr));
 	}
 
 	TEST(test_openmode, test_out)
@@ -68,7 +68,7 @@ namespace TestIosBase
 		actualStr = stringStream.str();
 
 		// then
-		ASSERT_THAT(actualStr, testing::StrEq(expectedStr));
+		ASSERT_THAT(actualStr, StrEq(expectedStr));
 	}
 
 	TEST(test_openmode, test_trunc)
@@ -89,7 +89,7 @@ namespace TestIosBase
 		std::fstream(fname, std::ios::in) >> actualString;
 
 		// then
-		ASSERT_THAT(actualString, testing::StrEq("Bla"));
+		ASSERT_THAT(actualString, StrEq("Bla"));
 	}
 
 	TEST(test_openmode, test_ate)
@@ -104,7 +104,7 @@ namespace TestIosBase
 			const auto actualPos = stringStream.tellp();
 
 			// then
-			ASSERT_THAT(actualPos, testing::Eq(expectedPos));
+			ASSERT_THAT(actualPos, Eq(expectedPos));
 		}
 
 		{
@@ -115,7 +115,7 @@ namespace TestIosBase
 			const auto actualPos = stringStream.tellp();
 
 			// then
-			ASSERT_THAT(actualPos, testing::Eq(expectedPos));
+			ASSERT_THAT(actualPos, Eq(expectedPos));
 		}
 	}
 

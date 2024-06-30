@@ -38,8 +38,6 @@ namespace TestMemory
 		// when
 		auto weakObj = obj->weak_from_this();
 
-		using namespace testing;
-
 		// then
 		ASSERT_THAT(weakObj.expired(), IsFalse());
 

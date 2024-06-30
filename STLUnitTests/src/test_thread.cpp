@@ -75,6 +75,6 @@ namespace TestThread
 		t2.join();
 
 		// then 
-		ASSERT_THAT(vec, testing::ElementsAre(0, 1, 2, 3, 4, 5, 6, 7, 8, 9));
+		ASSERT_THAT(vec, ElementsAre(0, 1, 2, 3, 4, 5, 6, 7, 8, 9));
 	}
 }

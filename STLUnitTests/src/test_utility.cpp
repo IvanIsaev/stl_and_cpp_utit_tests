@@ -33,8 +33,8 @@ namespace TestUtility
 				
 
 		// then
-		ASSERT_THAT(v, testing::StrEq("hello"));
-		ASSERT_THAT(vConst, testing::StrEq("hello"));
+		ASSERT_THAT(v, StrEq("hello"));
+		ASSERT_THAT(vConst, StrEq("hello"));
 	}
 		
 }

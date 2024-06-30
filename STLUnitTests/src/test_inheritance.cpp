@@ -66,6 +66,6 @@ namespace TestInheritance {
 		};
 
 		Public_Morozov pb;
-		ASSERT_THAT(pb.getMoney(), testing::Eq(1000000));
+		ASSERT_THAT(pb.getMoney(), Eq(1000000));
 	}
 }

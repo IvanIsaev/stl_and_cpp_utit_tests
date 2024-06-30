@@ -2,8 +2,8 @@
 
 int main()
 {
-    ::testing::InitGoogleTest();
-    ::testing::InitGoogleMock();
+    InitGoogleTest();
+    InitGoogleMock();
 
     return RUN_ALL_TESTS();
 }

@@ -118,6 +118,6 @@ namespace TestTuple
 
 		std::tie(std::ignore, inserted) = setOfString.insert("Text");
 
-		ASSERT_THAT(inserted, testing::IsTrue());
+		ASSERT_THAT(inserted, IsTrue());
 	}
 }
